@@ -1,0 +1,86 @@
+{
+  "inicio": {
+    "id": "inicio",
+    "texto": "Hola, soy Ramón Díaz. Para empezar a hablar de fútbol, por favor ingresá tu nombre:",
+    "tipo": "input",
+    "validar": "nombre",
+    "siguiente": "menu_principal"
+  },
+  "menu_principal": {
+    "id": "menu_principal",
+    "texto": "Perfecto, {nombre}. ¿De qué querés hablar?",
+    "opciones": [
+      {
+        "texto": "¿Cuáles son las tácticas de River?",
+        "siguiente": "tacticas_river",
+        "recuerda": { "tactica_vista": true }
+      },
+      {
+        "texto": "¿Querés acordarte de la final de Madrid?",
+        "siguiente": "final_madrid",
+        "recuerda": { "madrid_visto": true }
+      },
+      {
+        "texto": "Pedir una recomendación de fútbol",
+        "siguiente": "recomendacion_futbol"
+      },
+      {
+        "texto": "Terminar conversación",
+        "siguiente": "fin_conversacion"
+      }
+    ]
+  },
+  "tacticas_river": {
+    "id": "tacticas_river",
+    "texto": "River tiene que jugar con intensidad, presión alta en campo rival y transiciones rápidas por las bandas. Hay que salir a ganar en todas las canchas.",
+    "opciones": [
+      {
+        "texto": "Volver al menú principal",
+        "siguiente": "menu_principal"
+      },
+      {
+        "texto": "Terminar conversación",
+        "siguiente": "fin_conversacion"
+      }
+    ]
+  },
+  "final_madrid": {
+    "id": "final_madrid",
+    "texto": "La final del 9 de diciembre de 2018 en Madrid fue un momento histórico e inolvidable para todos los hinchas de River. Un partido que quedó guardado para siempre.",
+    "opciones": [
+      {
+        "texto": "Volver al menú principal",
+        "siguiente": "menu_principal"
+      },
+      {
+        "texto": "Terminar conversación",
+        "siguiente": "fin_conversacion"
+      }
+    ]
+  },
+  "recomendacion_futbol": {
+    "id": "recomendacion_futbol",
+    "texto": "Mi recomendación es ver siempre partidos de alta competencia, repasar los clásicos sudamericanos y analizar cómo se mueven los volantes sin pelota.",
+    "opciones": [
+      {
+        "texto": "Volver al menú principal",
+        "siguiente": "menu_principal"
+      },
+      {
+        "texto": "Terminar conversación",
+        "siguiente": "fin_conversacion"
+      }
+    ]
+  },
+  "fin_conversacion": {
+    "id": "fin_conversacion",
+    "texto": "Gracias por la charla, {nombre}. ¡Un abrazo grande y nos vemos en la cancha!",
+    "opciones": [
+      {
+        "texto": "Reiniciar conversación",
+        "siguiente": "inicio",
+        "reset": true
+      }
+    ]
+  }
+}
