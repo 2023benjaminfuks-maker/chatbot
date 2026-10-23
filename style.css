@@ -1,0 +1,207 @@
+/* Reset y variables de estilo oscuro y moderno */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #0b0f19;
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* ZONA (Estructura principal del chat) */
+.zona {
+  background: #161e2e;
+  border: 1px solid #2d3748;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  height: 90vh;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Header del Bot */
+.header-bot {
+  background-color: #1f293d;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #2d3748;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  background-color: #dc2626;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.bot-info h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.bot-info .status {
+  font-size: 0.75rem;
+  color: #10b981;
+}
+
+/* CHAT (Historial de mensajes) */
+.chat {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+
+.chat::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat::-webkit-scrollbar-thumb {
+  background-color: #374151;
+  border-radius: 3px;
+}
+
+.msg {
+  max-width: 82%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  word-wrap: break-word;
+}
+
+.msg-bot {
+  background-color: #243044;
+  color: #e2e8f0;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  border: 1px solid #334155;
+}
+
+.msg-user {
+  background-color: #dc2626;
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.msg-error {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+  border: 1px solid #991b1b;
+  align-self: center;
+  font-size: 0.85rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* OPCIONES (Panel de control/botones de interacción) */
+.opciones {
+  padding: 15px 20px;
+  background-color: #1a2332;
+  border-top: 1px solid #2d3748;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-opcion {
+  background-color: #243044;
+  color: #f1f5f9;
+  border: 1px solid #3b82f6;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.btn-opcion:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.input-container input {
+  flex: 1;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.input-container input:focus {
+  border-color: #3b82f6;
+}
+
+.btn-enviar {
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: #b91c1c;
+}
+
+/* RESPUETSAS (Footer con estado o selecciones recordadas) */
+.respuestas {
+  padding: 10px 20px;
+  background-color: #0f172a;
+  border-top: 1px solid #1e293b;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+  .zona {
+    height: 100vh;
+    max-height: none;
+    border-radius: 0;
+    border: none;
+  }
+}
